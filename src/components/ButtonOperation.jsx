@@ -2,8 +2,8 @@ export const ButtonOperation = ({ operation, setOperation, setFirstNumber, setSe
 
   const clearFields = () => {
     setOperation('');
-    setFirstNumber(0)
-    setSecondNumber(0)
+    setFirstNumber('')
+    setSecondNumber('')
   }
 
   const sendOperation = () => {

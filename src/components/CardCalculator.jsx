@@ -4,8 +4,8 @@ import { optionsOperations } from "../utils/operations";
 import { controlOperations } from '../utils/operationFunctions'
 
 export const CardCalculator = () => {
-  const [firstNumber, setFirstNumber] = useState(0);
-  const [secondNumber, setSecondNumber] = useState(0);
+  const [firstNumber, setFirstNumber] = useState('');
+  const [secondNumber, setSecondNumber] = useState('');
   const [operation, setOperation] = useState('');
   const value = controlOperations( operation, firstNumber, secondNumber)
 
@@ -13,7 +13,7 @@ export const CardCalculator = () => {
     <section className="bg-gray-100 shadow-xl rounded-lg">
       <h1 className="text-center p-2 text-xl">Coloque dois número e escolha a operação</h1>
       
-      <section className="flex p-8 justify-between">
+      <section className="sm:flex-row flex flex-col p-8 justify-between">
         <input
           value={firstNumber}
           onChange={({target}) => setFirstNumber(+target.value)}
@@ -36,7 +36,7 @@ export const CardCalculator = () => {
         </p>
       </section>
 
-      <section className="flex flex-wrap gap-2 p-8">
+      <section className="flex flex-wrap justify-center gap-2 p-8">
         { optionsOperations.map((operation) => <ButtonOperation
           key={operation}
           operation={operation}
