@@ -25,17 +25,4 @@ export const controlOperations = (equation) => {
     const calculate = result.join('')
     return calculate;
   }
-
-  // if (operator === '+') {
-  //   return sum(firstNumber, secondNumber);
-  // };
-  // if (operator === '-') {
-  //   return sub(firstNumber, secondNumber);
-  // };
-  // if (operator === '/') {
-  //   return div(firstNumber, secondNumber);
-  // };
-  // if (operator === 'x') {
-  //   return mult(firstNumber, secondNumber);
-  // };
 };
