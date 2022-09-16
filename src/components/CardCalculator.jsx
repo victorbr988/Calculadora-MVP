@@ -5,18 +5,19 @@ import { optionsOperations } from "../utils/operations";
 export const CardCalculator = () => {
   const [equation, setEquation] = useState('');
   const [resultEquation, setResultEquation] = useState(0);
-  const AllNumbers = [1,2,3,4,5,6,7,8,9,0]
+  const AllNumbers = ['1','2','3','4','5','6','7','8','9','0']
 
   return (
     <section className="bg-gray-100 max-w-xl shadow-xl rounded-lg">
       <h1 className="text-center p-2 text-xl">Coloque dois números e escolha a operação</h1>
       
       <section className="sm:flex-row flex flex-col gap-4 p-8 justify-between">
-        <input
-          defaultValue={equation}
+        <p
           className="border-2 border-blue-500 text-lg w-full text-end rounded-lg p-2 shadow-lg"
           type="text"
-        />
+        >
+          {equation || 0}
+        </p>
       </section>
 
       <section>
