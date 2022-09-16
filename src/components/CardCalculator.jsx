@@ -11,7 +11,7 @@ export const CardCalculator = () => {
 
   return (
     <section className="bg-gray-100 shadow-xl rounded-lg">
-      <h1 className="text-center p-2 text-xl">Coloque dois número e escolha a operação</h1>
+      <h1 className="text-center p-2 text-xl">Coloque dois números e escolha a operação</h1>
       
       <section className="sm:flex-row flex flex-col gap-4 p-8 justify-between">
         <input
