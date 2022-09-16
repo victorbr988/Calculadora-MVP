@@ -9,8 +9,7 @@ export const CardCalculator = () => {
 
   return (
     <section className="bg-gray-100 max-w-xl shadow-xl rounded-lg">
-      <h1 className="text-center p-2 text-xl">Coloque dois números e escolha a operação</h1>
-      
+    
       <section className="sm:flex-row flex flex-col gap-4 p-8 justify-between">
         <p
           className="border-2 border-blue-500 text-lg w-full text-end rounded-lg p-2 shadow-lg"
