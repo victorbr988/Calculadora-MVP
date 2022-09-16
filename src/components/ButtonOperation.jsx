@@ -7,6 +7,11 @@ export const ButtonOperation = (dataProps) => {
       const newEquation = dataProps.equation.replace('x', '*')
       return dataProps.setResultEquation(eval(newEquation))
     }
+    if(dataProps.operation === '<') {
+      const removeEndIndex = dataProps.equation;
+      console.log(removeEndIndex);
+      return dataProps.setEquation(removeEndIndex.substring(0, removeEndIndex.length - 1));
+    }
     return sendOperation(dataProps.operation)
   }
   const clearFields = () => {

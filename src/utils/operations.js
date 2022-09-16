@@ -4,5 +4,6 @@ export const optionsOperations = [
   '+',
   '-',
   '/',
-  'x'
+  'x',
+  '<'
 ];
