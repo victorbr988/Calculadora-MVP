@@ -1,29 +1,29 @@
-import { useState } from "react"
-import { ButtonOperation } from "./ButtonOperation";
+import { useState } from 'react';
+import { ButtonOperation } from './ButtonOperation';
 import { optionsOperations } from "../utils/operations";
-import { controlOperations } from '../utils/operationFunctions'
+import { controlOperations } from '../utils/operationFunctions';
 
 export const CardCalculator = () => {
   const [firstNumber, setFirstNumber] = useState('');
   const [secondNumber, setSecondNumber] = useState('');
   const [operation, setOperation] = useState('');
-  const value = controlOperations( operation, firstNumber, secondNumber)
+  const value = controlOperations( operation, firstNumber, secondNumber);
 
   return (
     <section className="bg-gray-100 shadow-xl rounded-lg">
       <h1 className="text-center p-2 text-xl">Coloque dois número e escolha a operação</h1>
       
-      <section className="sm:flex-row flex flex-col p-8 justify-between">
+      <section className="sm:flex-row flex flex-col gap-4 p-8 justify-between">
         <input
           value={firstNumber}
-          onChange={({target}) => setFirstNumber(+target.value)}
+          onChange={({ target }) => setFirstNumber(+target.value)}
           className="border-2 border-blue-500 text-lg text-center rounded-lg p-2 shadow-lg"
           type="number"
         />
 
         <input
           value={secondNumber}
-          onChange={({target}) => setSecondNumber(+target.value)}
+          onChange={({ target }) => setSecondNumber(+target.value)}
           className="border-2 border-blue-500 rounded-lg text-lg text-center p-2 shadow-lg"
           type="number"
         />
@@ -36,7 +36,7 @@ export const CardCalculator = () => {
         </p>
       </section>
 
-      <section className="flex flex-wrap justify-center gap-2 p-8">
+      <section className="flex flex-wrap justify-center sm:justify-between gap-2 p-8">
         { optionsOperations.map((operation) => <ButtonOperation
           key={operation}
           operation={operation}
@@ -46,5 +46,5 @@ export const CardCalculator = () => {
         />)}
       </section>
     </section>
-  )
-}
+  );
+};

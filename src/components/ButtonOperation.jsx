@@ -1,24 +1,24 @@
-export const ButtonOperation = ({ operation, setOperation, setFirstNumber, setSecondNumber }) => {
+export const ButtonOperation = (dataProps) => {
 
   const clearFields = () => {
-    setOperation('');
-    setFirstNumber('')
-    setSecondNumber('')
-  }
+    dataProps.setOperation('');
+    dataProps.setFirstNumber('');
+    dataProps.setSecondNumber('');
+  };
 
   const sendOperation = () => {
-    setOperation(operation);
-  }
+    dataProps.setOperation(dataProps.operation);
+  };
   
   return (
     <button
       onClick={() => {
-          operation === 'AC' ? clearFields() : sendOperation()
+        dataProps.operation === 'AC' ? clearFields() : sendOperation();
         }
       }
       className="bg-blue-500 py-4 px-10 text-white text-xl rounded-lg"
       >
-        { operation }
+        { dataProps.operation }
       </button>
   );
 };

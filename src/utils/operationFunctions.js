@@ -5,16 +5,15 @@ const mult = (number1, number2) => number1 * number2;
 
 export const controlOperations = (operator, firstNumber, secondNumber) => {
   if (operator === '+') {
-    return sum(firstNumber, secondNumber)
-  }
+    return sum(firstNumber, secondNumber);
+  };
   if (operator === '-') {
-    return sub(firstNumber, secondNumber)
-  }
+    return sub(firstNumber, secondNumber);
+  };
   if (operator === '/') {
-    return div(firstNumber, secondNumber)
-  }
+    return div(firstNumber, secondNumber);
+  };
   if (operator === 'x') {
-    return mult(firstNumber, secondNumber)
-    
-  }
-}
+    return mult(firstNumber, secondNumber);
+  };
+};

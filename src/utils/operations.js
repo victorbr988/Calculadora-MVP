@@ -1,1 +1,7 @@
-export const optionsOperations = ['AC', '+', '-', '/', 'x'];
+export const optionsOperations = [
+  'AC',
+  '+',
+  '-',
+  '/',
+  'x'
+];
