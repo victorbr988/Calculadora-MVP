@@ -4,12 +4,11 @@ export const ButtonOperation = (dataProps) => {
       return clearFields()
     }
     if(dataProps.operation === '=') {
-      const newEquation = dataProps.equation.replace('x', '*')
-      return dataProps.setResultEquation(eval(newEquation))
+      let equations = dataProps.equation.replaceAll('x', '*');
+      return dataProps.setResultEquation(eval(equations))
     }
     if(dataProps.operation === '<') {
       const removeEndIndex = dataProps.equation;
-      console.log(removeEndIndex);
       return dataProps.setEquation(removeEndIndex.substring(0, removeEndIndex.length - 1));
     }
     return sendOperation(dataProps.operation)
